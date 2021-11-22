@@ -44,7 +44,7 @@ stage('Build Image') {
             -Dquarkus.container-image.username=$QUAY_USR \
             -Dquarkus.container-image.password="$QUAY_PSW" \
             -Dquarkus.container-image.tag=build-${BUILD_NUMBER} \
-            -Dquarkus.container-image.push=true 
+            -Dquarkus.container-image.push=true --debug
         '''
     }
 }
